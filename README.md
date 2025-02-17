@@ -43,3 +43,6 @@ mkdir build
 cmake .. -DQT_CMAKE_DIR=<path_to_qt_dir_with_cmake_files> 
 make
 ```
+## Настройки по умолчанию
+Host: 127.0.0.1
+Port: 12345
