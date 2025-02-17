@@ -29,7 +29,7 @@ mkdir -p <path_to_dir> && cd <path_to_dir>
 ```
 Скачиваем проект по http через git
 ```bash
-git clone https://github.com/Vadim7423/tcpServer.git .
+git clone https://github.com/Vadim7423/tcpClient.git .
 ```
 
 ## Сборка проекта (в консоли)
