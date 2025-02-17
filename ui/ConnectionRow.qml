@@ -4,17 +4,24 @@ import QtQuick.Controls
 import testQtClient
 
 Item {
+  id: root
+
   RowLayout {
     height: parent.height
+    spacing: 10
     width: parent.width
 
     Button {
       id: connect_btn
 
+      Layout.preferredHeight: parent.height
+      Layout.preferredWidth: parent.width / 3 - 10
       enabled: !App.connection
-      height: parent.height
       text: "Подключиться"
-      width: 200
+
+      background: Rectangle {
+        color: App.connection ? "#d7d5d7" : "#cae7cd"
+      }
 
       onClicked: {
         App.connection = true;
@@ -24,10 +31,14 @@ Item {
     Button {
       id: disconnect_btn
 
+      Layout.preferredHeight: parent.height
+      Layout.preferredWidth: parent.width / 3 - 10
       enabled: App.connection
-      height: parent.height
       text: "Отлючиться"
-      width: 200
+
+      background: Rectangle {
+        color: !App.connection ? "#d7d5d7" : "#cae7cd"
+      }
 
       onClicked: {
         App.connection = false;
@@ -37,10 +48,14 @@ Item {
     Button {
       id: test_btn
 
+      Layout.preferredHeight: parent.height
+      Layout.preferredWidth: parent.width / 3 - 10
       enabled: App.connection
-      height: parent.height
-      text: "Тест"
-      width: 200
+      text: "Обновить данные"
+
+      background: Rectangle {
+        color: !App.connection ? "#d7d5d7" : "#cae7cd"
+      }
 
       onClicked: {
         App.testRequest();

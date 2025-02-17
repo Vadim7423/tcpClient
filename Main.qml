@@ -23,8 +23,15 @@ Window {
       Layout.preferredWidth: parent.width
     }
 
+    StatusesRow {
+      id: statuses
+
+      Layout.preferredHeight: 30
+      Layout.preferredWidth: parent.width
+    }
+
     VoltMetersList {
-      Layout.preferredHeight: parent.height - connect_row.height
+      Layout.preferredHeight: parent.height - statuses.height - connect_row.height
       Layout.preferredWidth: parent.width
     }
   }

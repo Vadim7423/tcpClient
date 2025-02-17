@@ -8,6 +8,15 @@ Item {
   property var borderColors: ["#5feafe", "#27aa27", "#6d5af6", "#faada9"]
   property var colors: ["#e6edee", "#e8ffe8", "#e9e6fe", "#feeeed"]
 
+  Item {
+    height: !volt_meter_model.rowCount() ? 20 : 0
+    width: parent.width
+
+    Text {
+      text: "необходимо обновить данные"
+    }
+  }
+
   ListView {
     id: list
 

@@ -4,6 +4,8 @@ project(testQtClient VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+list(APPEND CMAKE_PREFIX_PATH ${QT_CMAKE_DIR})
+
 find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
 
 qt_standard_project_setup(REQUIRES 6.5)
@@ -20,6 +22,7 @@ qt_add_qml_module(apptestQtClient
         ui/ConnectionRow.qml
         ui/VoltMetersList.qml
         ui/VoltMeter.qml
+        ui/StatusesRow.qml
     SOURCES
         tcp/tcp_client.h
         tcp/boost_tcp_client.h tcp/boost_tcp_client.cpp
